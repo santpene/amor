@@ -1,3 +1,7 @@
+.envelope-wrapper {
+  text-align: center;
+}
+
 #envelope {
   margin: 150px auto;
   position: relative;
@@ -7,18 +11,13 @@
   border-bottom-right-radius: 6px;
   background-color: #f9c5c8;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
 }
 
-.words {
+.front {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Comic Sans MS', cursive;
-  font-size: 24px;
-  color: #ff0080; /* Rosa */
+  width: 0;
+  height: 0;
+  z-index: 3;
 }
 
 .flap {
@@ -61,22 +60,35 @@
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(239, 215, 239, 0.7) 55%, #eed7ef 100%);
 }
 
+.words {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 24px;
+  color: #ff0080; /* Rosa */
+}
+
 .words.line1 {
-  top: 15%;
-  width: 20%;
-  height: 7%;
+  top: 10%;
+  width: 100%;
 }
 
 .words.line2 {
   top: 30%;
+  width: 100%;
 }
 
 .words.line3 {
   top: 50%;
+  width: 100%;
 }
 
 .words.line4 {
   top: 70%;
+  width: 100%;
 }
 
 .open .flap {
@@ -189,7 +201,6 @@
     top: -600px;
   }
 }
-
 @keyframes slideUp {
   0% {
     top: 0;
@@ -198,7 +209,6 @@
     top: -600px;
   }
 }
-
 @-webkit-keyframes sideSway {
   0% {
     margin-left: 0px;
@@ -207,7 +217,6 @@
     margin-left: 50px;
   }
 }
-
 @keyframes sideSway {
   0% {
     margin-left: 0px;
@@ -216,13 +225,8 @@
     margin-left: 50px;
   }
 }
-
 body {
   background-color: #f7d9da;
-}
-
-.envlope-wrapper {
-  height: 380px;
 }
 
 .reset {
