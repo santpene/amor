@@ -1,4 +1,4 @@
-#sobre {
+#envelope {
   margin: 150px;
   position: relative;
   width: 280px;
@@ -225,7 +225,7 @@ body {
   background-color: #f7d9da;
 }
 
-.envoltura-sobre {
+.wrapper-envelope {
   height: 380px;
 }
 
