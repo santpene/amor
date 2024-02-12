@@ -1,26 +1,25 @@
-$( document ).ready(function() {
-    
-    var envelope = $('#envelope');
-    var btn_open = $("#open");
-    var btn_reset = $("#reset");
-    
-    envelope.click( function() {
-        open();
-    });
-    btn_open.click( function() {
-        open();
-    });
-    btn_reset.click( function() {
-        close();
-    });
+$(document).ready(function() {
+  var sobre = $('#sobre');
+  var btn_abrir = $("#abrir");
+  var btn_reset = $("#reset");
 
-    function open() {
-        envelope.addClass("open")
-           .removeClass("close");
-    }
-    function close() {
-        envelope.addClass("close")
-           .removeClass("open");
-    }
-   
+  sobre.click(function() {
+    abrir();
+  });
+  btn_abrir.click(function() {
+    abrir();
+  });
+  btn_reset.click(function() {
+    cerrar();
+  });
+
+  function abrir() {
+    sobre.addClass("abrir").removeClass("cerrar");
+    $('.texto-san-valentin').show(); // Muestra el texto al abrir la carta
+  }
+
+  function cerrar() {
+    sobre.addClass("cerrar").removeClass("abrir");
+    $('.texto-san-valentin').hide(); // Oculta el texto al cerrar la carta
+  }
 });
